@@ -6,7 +6,7 @@ import {Welcome, Login} from "./screens/index.js"
 const App = () => {
   return (
     <View style={styles.root}>
-      <Welcome />
+      <Login />
     </View>
     )
 }
