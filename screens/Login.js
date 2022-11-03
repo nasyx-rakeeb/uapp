@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, TextInput} from "react-native"
 import {colors} from "../constants/colors.js"
 import Button from "../components/Button.js"
-import TxtBtn from "../components/TxtBtn.js"
+import TxtBtn from "../components/txtBtn.js"
 
 const Login = () => {
   return (
@@ -12,7 +12,9 @@ const Login = () => {
         <TextInput secureTextEntry style={styles.input} placeholder="Password" />
       </View>
       <Button title="Log In" />
-      <TxtBtn title="Forgot Password" />
+      <View style={styles.btnContainer}>
+        <TxtBtn title="Forgot Password" />
+      </View>
     </View>
     )
 }
@@ -33,12 +35,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.silver,
     width: "85%",
-    paddingVertical: 10,
+    paddingVertical: 9,
     fontSize: 18,
-    paddingLeft: 5
+    paddingLeft: 4,
+    marginBottom: 12
   },
   txt: {
     fontSize: 34
+  },
+  btnContainer: {
+    marginTop: 18
   }
 })
 

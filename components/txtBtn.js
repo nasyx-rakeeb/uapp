@@ -1,10 +1,10 @@
-import {StyleSheet, Text, View} from "react-native"
+import {StyleSheet, Text, View, Pressable} from "react-native"
 import {colors} from "../constants/colors.js"
 
 const TxtBtn = ({title, onPress}) => {
   return (
     <View style={styles.root}>
-      <Pressable android_ripple={{color: "silver"}} style={{width: "100%"}} onPress={onPress}>
+      <Pressable style={({pressed}) => [{opacity: pressed ? .7 : 1}]} onPress={onPress}>
         <Text style={styles.title}>{title}</Text>
       </Pressable>
     </View>
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   title: {
     color: colors.green,
     textAlign: "center",
-    fontSize: 22
+    fontSize: 17
   }
 })
 
